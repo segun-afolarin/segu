@@ -1,0 +1,206 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 30px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hero {
+    background-color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: white;
+}
+
+section h2 {
+    color: #333;
+}
+
+/* Contact Section */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label,
+form input,
+form textarea,
+form button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 16px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design for Mobile Devices */
+
+/* For screens smaller than 768px (Tablets and below) */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    #navbar-links.active {
+        display: block;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+
+    section {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* For screens smaller than 480px (Phones and below) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 14px;
+    }
+
+    form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+/* For screens between 480px and 768px (Small Tablets and Large Phones) */
+@media (min-width: 481px) and (max-width: 768px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 16px;
+    }
+
+    form button {
+        font-size: 16px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Videos</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <!-- Header Section with Navigation -->
+    <header>
+        <h1>🎥 Football Videos</h1>
+        <nav>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul id="nav-list">
+                <li><a href="index.html">🏠 Home</a></li>
+                <li><a href="teams.html">🏆 Teams</a></li>
+                <li><a href="players.html">👕 Players</a></li>
+                <li><a href="videos.html">🎥 Videos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Videos Section -->
+    <section class="videos-intro">
+        <h2>Watch Amazing Football Highlights</h2>
+        <p>Relive the best moments in football history! From legendary goals to jaw-dropping skills, watch and enjoy the magic of the game. ⚽🔥</p>
+    </section>
+    
+    <!-- Featured Videos -->
+    <section class="video-gallery">
+        <h2>🌟 Top Football Videos</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="VIDEOS/SKILLS.mp4" title="Football Skills" allowfullscreen></iframe>
+            <p>🔥 Insane Dribbles & Skills</p>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="VIDEOS/GOALS - Copy (2).mp4" title="Best Goals" allowfullscreen></iframe>
+            <p>⚽ Best Goals of All Time</p>
+        </div>
+        <div class="video-container">
+            <iframe width="560" height="315" src="VIDEOS/KEEPER SAVING.mp4" title="Top Saves" allowfullscreen></iframe>
+            <p>🧤 Top Goalkeeper Saves</p>
+        </div>
+    </section>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Football Hub | All Rights Reserved</p>
+        <p>⚽ Bringing you the best football action!</p>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navList = document.getElementById('nav-list');
+        
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

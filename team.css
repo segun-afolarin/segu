@@ -1,0 +1,191 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #1e1e1e;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: #222;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+/* Navigation Styling */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffd700;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+/* Section Styles */
+section {
+    padding: 80px 20px;
+    background: #333;
+    margin-top: 80px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+section h2 {
+    font-size: 28px;
+    color: #ffd700;
+    animation: bounceText 1.5s infinite alternate;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 10px 0;
+}
+
+/* Legendary Clubs List */
+.legendary-clubs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.legendary-clubs li {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #ffd700;
+    font-size: 18px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.legendary-clubs li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Fun Facts Section */
+.fun-facts p {
+    background: #111;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 10px 0;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+.fun-facts p:hover {
+    background: #ffd700;
+    color: #222;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: #ffd700;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceText {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

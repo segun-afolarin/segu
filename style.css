@@ -1,206 +1,187 @@
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-header {
-    background-color: #333;
+body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: white;
-    padding: 20px;
     text-align: center;
+    overflow-x: hidden;
+    line-height: 1.6;
 }
 
-header h1 {
-    margin: 0;
+/* Header & Navigation */
+header {
+    background: #1a1a2e;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #f8b400;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ffcc00;
     text-decoration: none;
-    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s, transform 0.2s;
 }
 
+nav ul li a:hover {
+    color: #ffdf75;
+    transform: scale(1.1);
+}
+
+/* Mobile Menu */
 .navbar-toggle {
     display: none;
-    font-size: 30px;
-    color: white;
-    background: none;
+    background: #ffcc00;
+    color: black;
+    font-size: 24px;
     border: none;
+    padding: 10px;
     cursor: pointer;
 }
 
-.hero {
-    background-color: #fff;
-    padding: 40px;
-    text-align: center;
-}
-
-section {
-    margin: 20px 0;
-    padding: 20px;
-    background-color: white;
-}
-
-section h2 {
-    color: #333;
-}
-
-/* Contact Section */
-form {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-form label,
-form input,
-form textarea,
-form button {
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-form input,
-form textarea {
-    padding: 10px;
-    font-size: 16px;
-}
-
-form button {
-    padding: 10px;
-    font-size: 16px;
-    background-color: #333;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-/* Footer Styling */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px;
-}
-
-/* Responsive Design for Mobile Devices */
-
-/* For screens smaller than 768px (Tablets and below) */
 @media (max-width: 768px) {
-    nav ul {
-        display: none;
-        width: 100%;
-        text-align: left;
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
     .navbar-toggle {
         display: block;
     }
-
-    #navbar-links.active {
-        display: block;
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #111;
+        padding: 10px;
+        position: absolute;
+        width: 100%;
+        top: 60px;
     }
-
-    .hero {
-        padding: 20px;
-    }
-
-    section {
-        margin: 10px;
-        padding: 15px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 14px;
-    }
-
-    footer {
-        font-size: 14px;
+    nav ul.active {
+        display: flex;
     }
 }
 
-/* For screens smaller than 480px (Phones and below) */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 24px;
-    }
-
-    nav ul li a {
-        font-size: 14px;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    section h2 {
-        font-size: 18px;
-    }
-
-    form input,
-    form textarea {
-        font-size: 14px;
-    }
-
-    form button {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    footer {
-        font-size: 12px;
-        padding: 8px;
-    }
+/* Hero Section */
+.hero {
+    padding: 120px 20px;
+    background: url('images/mesi.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
 }
 
-/* For screens between 480px and 768px (Small Tablets and Large Phones) */
-@media (min-width: 481px) and (max-width: 768px) {
-    header h1 {
-        font-size: 26px;
-    }
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
 
-    .hero h2 {
-        font-size: 28px;
-    }
+.hero h2, .hero p {
+    position: relative;
+    z-index: 1;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
 
-    .hero p {
-        font-size: 16px;
-    }
+/* Sections */
+section {
+    padding: 80px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 80px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+    opacity: 1;
+}
 
-    form input,
-    form textarea {
-        font-size: 16px;
-    }
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ffdf75;
+}
 
-    form button {
-        font-size: 16px;
-    }
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #fff;
+}
 
-    footer {
-        font-size: 14px;
-    }
+/* Contact Form */
+form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: #252525;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #3a3a3a;
+    color: white;
+}
+
+button {
+    background: #ffcc00;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ffdf75;
+}
+
+/* Footer */
+footer {
+    background: #111;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ffcc00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
